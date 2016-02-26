@@ -6,6 +6,7 @@ export class MainController {
     this.classAnimation = '';
     this.creationDate = 1455148860955;
     this.toastr = toastr;
+    this.dateTimeStampe = '';
 
     this.activate($timeout, webDevTec);
   }
@@ -19,8 +20,10 @@ export class MainController {
   }
 
   getWebDevTec(webDevTec) {
+    var date = new Date();
     this.awesomeThings = webDevTec.getTec();
 
+    this.dateTimeStamp = date.getTime();
     angular.forEach(this.awesomeThings, (awesomeThing) => {
       awesomeThing.rank = Math.random();
     });

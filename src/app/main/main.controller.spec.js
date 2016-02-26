@@ -1,7 +1,7 @@
 describe('controllers', () => {
   let vm;
 
-  beforeEach(angular.mock.module('metropcs'));
+  beforeEach(angular.mock.module('MLB-Show'));
 
   beforeEach(inject(($controller, webDevTec, toastr) => {
     spyOn(webDevTec, 'getTec').and.returnValue([{}, {}, {}, {}, {}]);
